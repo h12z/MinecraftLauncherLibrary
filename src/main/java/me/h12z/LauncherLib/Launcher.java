@@ -15,22 +15,23 @@ public class Launcher {
     private File json;
     private String launchArgs;
 
-    public Launcher(String gameDirectory, String versionName, String playerName, String uuid, String accessToken) throws IOException, ParseException {
-
-        boolean downloadLibs = true;
+    public Launcher(String gameDirectory, String versionName, String playerName, String uuid, String accessToken) {
 
         String sep = File.separator;
         jar = new File(gameDirectory + sep + "versions" + sep + versionName + sep + versionName + ".jar");
         json = new File(gameDirectory + sep + "versions" + sep + versionName + sep + versionName + ".json");
 
-        File mkdirs = new File(gameDirectory + sep + "clientLibs");
+        File mkdirs = new File(gameDirectory + sep + "libraries");
         mkdirs.mkdirs();
 
-        if(downloadLibs) {
-            Libraries.downloadLibraries(Libraries.getLibraryDownloads(json), Libraries.getLibraryPaths(json, gameDirectory + File.separator + "clientLibs"));
-        }
+        String[] libsArray = null;
 
-        String[] libsArray = Libraries.getLibraryPaths(json, gameDirectory + File.separator + "clientLibs");
+        try {
+            Libraries.downloadLibraries(Libraries.getLibraryDownloads(json), Libraries.getLibraryPaths(json, gameDirectory + File.separator + "clientLibs"));
+            libsArray = Libraries.getLibraryPaths(json, gameDirectory + File.separator + "clientLibs");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         String libs = "";
         for(int i = 0; i < libsArray.length; i++) {
             libs = libs + libsArray[i] + ";";
@@ -53,10 +54,7 @@ public class Launcher {
         launchArgs = launchArgs.replace("--xuid ${auth_xuid} ", "");
         launchArgs = launchArgs.replace("--versionType ${version_type} ", "");
         launchArgs = launchArgs.replace("//", "/");
-
-
-        System.out.println(launchArgs);
-        System.out.println(LaunchArgs.getLaunchArgs(json));
+        launchArgs = launchArgs.replace("\\", "/");
 
     }
 
@@ -64,6 +62,9 @@ public class Launcher {
 
         Runtime rt = Runtime.getRuntime();
         Process pr = rt.exec(launchArgs);
+
+        PrintStream printStream = new PrintStream(pr.getOutputStream());
+        printStream.println();
 
     }
 

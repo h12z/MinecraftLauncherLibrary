@@ -108,9 +108,14 @@ public class Libraries {
             File folder = new File(paths[i].replace(paths[i].split("/")[paths[i].split("/").length - 1], ""));
             folder.mkdirs();
 
-            downloader.downloadFileToLocation(urls[i], paths[i]);
+            File file = new File(paths[i]);
+            if(!file.exists()) {
 
-            while(!downloaded) {
+                downloader.downloadFileToLocation(urls[i], paths[i]);
+
+                while (!downloaded) {
+
+                }
 
             }
 

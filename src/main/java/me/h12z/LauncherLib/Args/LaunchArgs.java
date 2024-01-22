@@ -55,16 +55,21 @@ public class LaunchArgs {
 
     }
 
-    public static String getMainClassPath(File json) throws IOException, ParseException {
+    public static String getMainClassPath(File json) {
 
         String result = "";
+        try {
 
-        JSONParser jsonParser = new JSONParser();
+            JSONParser jsonParser = new JSONParser();
 
-        Reader reader = new FileReader(json);
+            Reader reader = new FileReader(json);
 
-        JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
-        result = (String) jsonObject.get("mainClass");
+            JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
+            result = (String) jsonObject.get("mainClass");
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return result;
 
