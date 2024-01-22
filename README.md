@@ -3,7 +3,7 @@ The Official Minecraft Launcher has to be installed.
 Implementation:
 ```gradle
 repositories {
-  maven { url 'https://jitpack.io/' }
+  maven { url 'https://jitpack.io' }
 }
 
 dependencies {
