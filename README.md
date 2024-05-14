@@ -1,3 +1,5 @@
+Disclaimer: Only tested with 1.20.x Vanilla
+
 The Official Minecraft Launcher has to be installed.
 
 Implementation:
