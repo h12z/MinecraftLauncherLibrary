@@ -1,4 +1,4 @@
-package me.marnic.jdl;
+package me.h12z.LauncherLib.Downloader.jdl;
 
 import java.util.Timer;
 import java.util.TimerTask;

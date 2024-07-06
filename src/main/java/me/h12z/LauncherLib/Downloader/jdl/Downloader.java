@@ -1,4 +1,4 @@
-package me.marnic.jdl;
+package me.h12z.LauncherLib.Downloader.jdl;
 
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -47,7 +47,13 @@ public class Downloader {
             downloadLength = con.getContentLength();
 
             InputStream in = con.getInputStream();
-            FileOutputStream out = new FileOutputStream(pathToDownload);
+            FileOutputStream out = null;
+            try {
+                out = new FileOutputStream(pathToDownload);
+            } catch (Exception e) {
+                System.out.println("Eine datei konnte nicht heruntergeladen werden");
+                return;
+            }
 
             byte[] data = new byte[1024];
             int length;

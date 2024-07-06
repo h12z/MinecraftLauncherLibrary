@@ -1,4 +1,4 @@
-package me.marnic.jdl;
+package me.h12z.LauncherLib.Downloader.jdl;
 
 /**
  * Copyright (c) 12.01.2019
