@@ -6,10 +6,14 @@
 
     <groupId>me.h12z</groupId>
     <artifactId>MinecraftLauncherLibrary</artifactId>
-    <version>1</version>
+    <version>1.2.1</version>
 
     <repositories>
     </repositories>
+
+    <name>Minecraft Launcher Library for Java</name>
+    <description>A Launcher Library for Minecraft written in Java</description>
+    <url>https://github.com/h12z/MinecraftLauncherLibrary</url>
 
     <licenses>
         <license>
@@ -42,90 +46,9 @@
         <developer>
             <name>h12z</name>
             <email>private@h12z.me</email>
+            <organization>com.github.h12z</organization>
+            <organizationUrl>https://github.com/h12z/</organizationUrl>
         </developer>
     </developers>
-
-    <scm>
-        <connection>scm:git:git@github.com:h12z/MinecraftLauncherLibrary.git</connection>
-        <developerConnection>scm:git:ssh://github.com:h12z/MinecraftLauncherLibrary.git</developerConnection>
-        <url>https://github.com/h12z/MinecraftLauncherLibrary/tree/master</url>
-    </scm>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-clean-plugin</artifactId>
-                    <version>3.1.0</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-resources-plugin</artifactId>
-                    <version>3.0.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.8.0</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.22.1</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>3.0.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-install-plugin</artifactId>
-                    <version>2.5.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.8.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-site-plugin</artifactId>
-                    <version>3.7.1</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.0.0</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.sonatype.plugins</groupId>
-                    <artifactId>nexus-staging-maven-plugin</artifactId>
-                    <version>1.6.7</version>
-                    <extensions>true</extensions>
-                    <configuration>
-                        <serverId>ossrh</serverId>
-                        <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                        <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
-
-    <profiles>
-        <profile>
-            <id>release</id>
-            <activation>
-                <property>
-                    <name>performRelease</name>
-                    <value>true</value>
-                </property>
-            </activation>
-        </profile>
-    </profiles>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>ossrh</id>
-            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-        </repository>
-    </distributionManagement>
 
 </project>
