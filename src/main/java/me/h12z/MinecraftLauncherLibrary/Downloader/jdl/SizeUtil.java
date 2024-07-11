@@ -1,4 +1,4 @@
-package me.h12z.LauncherLib.Downloader.jdl;
+package me.h12z.MinecraftLauncherLibrary.Downloader.jdl;
 
 /**
  * Copyright (c) 12.01.2019

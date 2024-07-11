@@ -1,17 +1,16 @@
-package me.h12z.LauncherLib.Launcher.config;
+package me.h12z.MinecraftLauncherLibrary.Launcher.config;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import me.h12z.LauncherLib.Downloader.jdl.Downloader;
-import me.h12z.LauncherLib.Launcher.Library;
-import me.h12z.LauncherLib.Launcher.Var;
-import me.h12z.LauncherLib.Launcher.utils.FileUtils;
-import me.h12z.LauncherLib.Launcher.utils.StringUtils;
+import me.h12z.MinecraftLauncherLibrary.Downloader.jdl.Downloader;
+import me.h12z.MinecraftLauncherLibrary.Launcher.Library;
+import me.h12z.MinecraftLauncherLibrary.Launcher.Var;
+import me.h12z.MinecraftLauncherLibrary.Launcher.utils.FileUtils;
+import me.h12z.MinecraftLauncherLibrary.Launcher.utils.StringUtils;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class ExtractJsonContents {

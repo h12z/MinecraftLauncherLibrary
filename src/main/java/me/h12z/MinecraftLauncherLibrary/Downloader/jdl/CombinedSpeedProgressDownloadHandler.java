@@ -1,4 +1,4 @@
-package me.h12z.LauncherLib.Downloader.jdl;
+package me.h12z.MinecraftLauncherLibrary.Downloader.jdl;
 
 import java.util.Timer;
 import java.util.TimerTask;

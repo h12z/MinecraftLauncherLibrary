@@ -1,4 +1,4 @@
-package me.h12z.LauncherLib.Launcher;
+package me.h12z.MinecraftLauncherLibrary.Launcher;
 
 import java.io.File;
 

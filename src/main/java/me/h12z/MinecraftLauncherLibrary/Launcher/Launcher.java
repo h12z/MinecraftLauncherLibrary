@@ -1,11 +1,10 @@
-package me.h12z.LauncherLib.Launcher;
+package me.h12z.MinecraftLauncherLibrary.Launcher;
 
-import me.h12z.LauncherLib.Launcher.config.ExtractJsonContents;
-import me.h12z.LauncherLib.Launcher.utils.StringUtils;
+import me.h12z.MinecraftLauncherLibrary.Launcher.config.ExtractJsonContents;
+import me.h12z.MinecraftLauncherLibrary.Launcher.utils.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class Launcher {
 

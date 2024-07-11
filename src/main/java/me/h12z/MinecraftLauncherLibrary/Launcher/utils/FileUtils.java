@@ -1,4 +1,4 @@
-package me.h12z.LauncherLib.Launcher.utils;
+package me.h12z.MinecraftLauncherLibrary.Launcher.utils;
 
 import java.io.File;
 import java.io.FileNotFoundException;

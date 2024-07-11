@@ -1,4 +1,4 @@
-package me.h12z.LauncherLib.Downloader.jdl;
+package me.h12z.MinecraftLauncherLibrary.Downloader.jdl;
 
 import java.io.FileOutputStream;
 import java.io.InputStream;
