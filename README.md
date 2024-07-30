@@ -1,4 +1,8 @@
-Disclaimer: Only tested with 1.19.x Vanilla
+Tested with:
+  Vanilla:
+    1.18.x
+    1.19.x
+    1.20.x
 
 The Official Minecraft Launcher has to be installed.
 
